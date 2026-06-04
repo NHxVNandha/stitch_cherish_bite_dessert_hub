@@ -204,6 +204,144 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 10mm;
+            }
+
+            * {
+                animation: none !important;
+                transition: none !important;
+                scroll-behavior: auto !important;
+                box-shadow: none !important;
+                text-shadow: none !important;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            html,
+            body {
+                background: #ffffff !important;
+                color: #1c1b1a !important;
+                width: 100% !important;
+                overflow: visible !important;
+            }
+
+            header,
+            #quick-view-modal,
+            #share-modal,
+            .caramel-drip,
+            .absolute.top-1\/2,
+            .absolute.bottom-0,
+            .quick-view-btn,
+            #prev-testimony,
+            #next-testimony,
+            #testimony-form {
+                display: none !important;
+            }
+
+            #testimonial-container > div:has(#testimony-form) {
+                display: none !important;
+            }
+
+            main {
+                padding-top: 0 !important;
+            }
+
+            section {
+                padding-top: 12mm !important;
+                padding-bottom: 12mm !important;
+                overflow: visible !important;
+                break-inside: auto;
+                page-break-inside: auto;
+            }
+
+            .max-width,
+            .max-w-\[1200px\] {
+                max-width: none !important;
+                width: 100% !important;
+            }
+
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            .floating-anim,
+            .floating-anim-slow,
+            .product-card:hover,
+            .gallery-item:hover img,
+            .btn-pulse {
+                transform: none !important;
+            }
+
+            .min-h-\[70vh\] {
+                min-height: auto !important;
+            }
+
+            .rounded-\[3rem\],
+            .rounded-\[2\.5rem\] {
+                border-radius: 1.5rem !important;
+            }
+
+            img {
+                max-width: 100% !important;
+                max-height: 72mm !important;
+                object-fit: cover !important;
+            }
+
+            .aspect-square,
+            .aspect-\[4\/5\] {
+                aspect-ratio: auto !important;
+                height: auto !important;
+            }
+
+            #shop .grid,
+            main > section:nth-of-type(4) .grid,
+            section:nth-of-type(3) .grid,
+            #moments .grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+                gap: 8mm !important;
+            }
+
+            #testimonial-container {
+                display: grid !important;
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+                gap: 8mm !important;
+                overflow: visible !important;
+                padding-bottom: 0 !important;
+            }
+
+            #testimonial-container > div {
+                min-width: 0 !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .product-card,
+            #moments .relative,
+            footer > div > div {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            #moments .relative {
+                transform: none !important;
+            }
+
+            a {
+                color: inherit !important;
+                text-decoration: none !important;
+            }
+
+            footer {
+                background: #f8f3f0 !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
