@@ -653,6 +653,20 @@
 </div>
 
 <script>
+    // Smooth-scroll internal links without reloading file:// URLs in local previews.
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const targetId = link.getAttribute('href');
+            if (!targetId || targetId === '#') return;
+
+            const target = document.querySelector(targetId);
+            if (!target) return;
+
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
     // Navbar Scroll Transition
     const nav = document.getElementById('main-nav');
     window.addEventListener('scroll', () => {
@@ -842,7 +856,11 @@
 
         if (copyLinkBtn) {
             copyLinkBtn.addEventListener('click', () => {
-                navigator.clipboard.writeText(window.location.href).then(() => {
+                const shareUrl = window.location.protocol === 'file:'
+                    ? 'https://github.com/NHxVNandha/stitch_cherish_bite_dessert_hub'
+                    : window.location.href;
+
+                navigator.clipboard.writeText(shareUrl).then(() => {
                     const originalText = copyLinkBtn.querySelector('.font-label-md').textContent;
                     copyLinkBtn.querySelector('.font-label-md').textContent = 'Tersalin!';
                     setTimeout(() => {
