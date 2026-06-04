@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cherish Bite | Gigitan Kecil, Kebahagiaan Besar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface-variant": "#504441",
+                    "surface-container-high": "#ece7e4",
+                    "inverse-surface": "#32302e",
+                    "on-secondary-fixed-variant": "#65394b",
+                    "on-primary-fixed-variant": "#5b4137",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#e4beb2",
+                    "outline": "#827470",
+                    "secondary-fixed-dim": "#f2b6cb",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#2b160f",
+                    "secondary": "#805062",
+                    "on-tertiary-fixed-variant": "#584324",
+                    "primary-fixed": "#ffdbce",
+                    "surface-dim": "#ded9d6",
+                    "surface-container": "#f2edea",
+                    "on-surface": "#1c1b1a",
+                    "tertiary-fixed": "#feddb3",
+                    "inverse-on-surface": "#f5f0ed",
+                    "secondary-container": "#fec1d6",
+                    "surface-variant": "#e6e2df",
+                    "primary-fixed-dim": "#e4beb2",
+                    "on-primary-container": "#fffcff",
+                    "outline-variant": "#d4c3be",
+                    "tertiary-container": "#8a714e",
+                    "on-secondary-fixed": "#330f1f",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#281801",
+                    "primary-container": "#8d6e63",
+                    "surface-bright": "#fdf8f5",
+                    "on-secondary-container": "#7b4c5e",
+                    "tertiary-fixed-dim": "#e1c299",
+                    "on-background": "#1c1b1a",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f8f3f0",
+                    "surface": "#fdf8f5",
+                    "on-error-container": "#93000a",
+                    "primary": "#72564c",
+                    "tertiary": "#705937",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#fffdff",
+                    "secondary-fixed": "#ffd9e4",
+                    "background": "#fdf8f5",
+                    "surface-tint": "#75584d",
+                    "surface-container-highest": "#e6e2df"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1.5rem",
+                    "3xl": "2rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "2rem",
+                    "sm": "1rem",
+                    "max-width": "1200px",
+                    "md": "1.5rem",
+                    "gutter": "1.5rem",
+                    "2xl": "4rem",
+                    "xl": "3rem",
+                    "margin-desktop": "5rem",
+                    "xs": "0.5rem",
+                    "base": "8px",
+                    "margin-mobile": "1rem"
+            },
+            "fontFamily": {
+                    "body-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "label-sm": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "label-md": ["Montserrat"],
+                    "body-sm": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-xl": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .diffusion-shadow {
+            box-shadow: 0 20px 40px -15px rgba(114, 86, 76, 0.1);
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(254, 221, 179, 0.3) 0%, rgba(253, 248, 245, 0) 70%);
+        }
+        
+        /* Floating Animations */
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating-anim {
+            animation: floating 4s ease-in-out infinite;
+        }
+        .floating-anim-slow {
+            animation: floating 6s ease-in-out infinite;
+        }
+
+        /* Entrance Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Product Card Interactive */
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px -12px rgba(114, 86, 76, 0.15);
+        }
+
+        /* Gallery Motion */
+        .gallery-item {
+            transition: all 0.5s ease;
+            overflow: hidden;
+        }
+        .gallery-item img {
+            transition: transform 0.7s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.08) rotate(1deg);
+        }
+
+        /* Pulse Animation */
+        @keyframes pulse-subtle {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        .btn-pulse {
+            animation: pulse-subtle 3s infinite;
+        }
+
+        /* Caramel Drip Decor */
+        .caramel-drip {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 40px;
+            background: #72564c;
+            clip-path: polygon(0 0, 100% 0, 95% 40%, 80% 80%, 70% 50%, 55% 95%, 40% 60%, 25% 100%, 10% 45%, 5% 70%);
+            opacity: 0.1;
+            z-index: 10;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 transition-all duration-500 bg-transparent" id="main-nav">
+<nav class="flex justify-between items-center max-w-[1200px] mx-auto px-lg py-sm h-20">
+<div class="flex items-center gap-2">
+<img alt="Cherish Bite Logo" class="h-10 w-10 object-contain" src="LOGO.png"/>
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight">Cherish Bite</span>
+</div>
+<div class="hidden md:flex gap-xl">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#shop">Menu</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#about">Kisah Kami</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#moments">Momen Kami</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#contact">Kontak</a>
+</div>
+<a href="#contact" class="bg-primary text-on-primary px-lg py-3 rounded-2xl font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all duration-200 btn-pulse inline-block text-center">
+            Pesan Sekarang
+        </a>
+</nav>
+</header>
+<main class="pt-0">
+<!-- Hero Section -->
+<section class="relative overflow-hidden py-2xl hero-gradient pt-32">
+<div class="max-w-[1200px] mx-auto px-lg flex flex-col md:flex-row items-center gap-xl min-h-[70vh]">
+<div class="flex-1 space-y-md text-center md:text-left z-10 reveal">
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-widest">Patisserie Premium</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface md:leading-tight">
+                    Gigitan Kecil,<br/>Kebahagiaan Besar.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mx-auto md:mx-0">
+                    Di Cherish Bite, setiap dessert kecil dibuat dengan bahan-bahan premium dan sentuhan penuh cinta untuk menemani harimu.
+                </p>
+<div class="flex flex-col sm:flex-row gap-md pt-md justify-center md:justify-start">
+<a href="#contact" class="px-xl py-4 bg-primary text-on-primary rounded-2xl font-label-md text-label-md diffusion-shadow hover:-translate-y-1 transition-transform btn-pulse inline-block text-center">Pesan Sekarang</a>
+<a href="#shop" class="px-xl py-4 bg-surface-container-high text-primary rounded-2xl font-label-md text-label-md hover:bg-surface-variant transition-colors inline-block text-center">Lihat Menu</a>
+</div>
+</div>
+<div class="flex-1 relative reveal" style="transition-delay: 200ms;">
+<div class="relative w-full aspect-square rounded-3xl overflow-hidden diffusion-shadow z-0 floating-anim">
+<img alt="Hero Puding" class="w-full h-full object-cover" src="section-menu/puding-caramel.png"/>
+</div>
+<!-- Floating Cards -->
+<div class="absolute -bottom-6 -left-12 p-sm bg-surface rounded-2xl diffusion-shadow floating-anim-slow hidden lg:block border border-outline/5">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed overflow-hidden">
+<img alt="Cookie Mini" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhVTJo8sQB4hzdQHKWOynzFKk4oQVW_kcXm9IWkPqAdXAXOTwZcRTsG1FZYLgkDIQZsuvfbgEaeWNHkY1LRdYE2o9pAoYF639nAIyByFyF-OnQEhS9-UiRVFSVbAhIFvvPYIhW3UXHR9SToVmjwZ1IkUdUSBQl4CZFgi2fpyY87Gy5ifN8ybkd_7vX1vjXogtSiC4XTqvEHyOysVEyKw2GOrbC-xpMORYZFJuevy_BtNNJot8mvbKQRNMA"/>
+</div>
+<div>
+<p class="font-label-md text-label-md text-primary">Varian Baru!</p>
+<p class="font-body-sm text-body-sm opacity-60">Sea Salt Cookie</p>
+</div>
+</div>
+</div>
+<div class="absolute -top-6 -right-6 p-sm bg-surface rounded-2xl diffusion-shadow floating-anim hidden lg:block delay-700 border border-outline/5">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<p class="font-label-md text-label-md text-on-surface">Rating Pelanggan 5.0</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-2xl bg-surface-container-low relative" id="about">
+<div class="caramel-drip"></div>
+<div class="max-width mx-auto px-lg grid md:grid-cols-2 gap-2xl items-center">
+<div class="order-2 md:order-1 relative group reveal">
+<div class="grid grid-cols-2 gap-sm">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden mt-xl gallery-item">
+<img alt="Brownies Close Up" class="w-full h-full object-cover" src="close-up/close-up-brownies.jpg"/>
+</div>
+<div class="aspect-[4/5] rounded-3xl overflow-hidden gallery-item">
+<img alt="Cookies Stack" class="w-full h-full object-cover" src="close-up/close-up-cookies.jpg"/>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 space-y-md reveal" style="transition-delay: 200ms;">
+<h2 class="font-headline-lg text-headline-lg text-primary">Kisah Manis di Setiap Gigitan</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Kami percaya bahwa kebahagiaan tidak harus besar — ia bisa hadir dalam detail-detail terkecil. Cherish Bite lahir dari kecintaan terhadap bahan-bahan premium dan filosofi Jepang "Kobito" — hal-hal kecil yang membawa kebahagiaan.
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant/80">
+                    Patisserie kami mengkhususkan diri pada sajian gigitan kecil yang dirancang untuk dibagi, dihadiahkan, atau dinikmati sebagai hadiah untuk diri sendiri. Dari puding karamel yang lembut hingga brownies fudgy kami, setiap potongan adalah buah dari kerja keras dan cinta.
+                </p>
+
+</div>
+</div>
+</section>
+<!-- Product Category Grid -->
+<section class="py-2xl" id="shop">
+<div id="flavors" class="max-width mx-auto px-lg">
+<div class="text-center space-y-xs mb-2xl reveal">
+<span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase">Menu Andalan</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Temukan Gigitan Favoritmu</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-xl">
+<!-- Brownies Bite -->
+<div class="group product-card reveal" style="transition-delay: 100ms;">
+<div class="relative rounded-3xl overflow-hidden bg-surface-container-high aspect-[4/5] mb-md gallery-item">
+<img alt="Brownies Bite" class="w-full h-full object-cover" src="section-menu/brownies-bite.jpg"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="quick-view-btn bg-surface text-primary px-lg py-3 rounded-2xl font-label-md text-label-md diffusion-shadow transform translate-y-4 group-hover:translate-y-0 transition-transform">Lihat Cepat</button>
+</div>
+</div>
+<div class="space-y-xs px-2">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md text-on-surface">Brownies Bite</h3>
+<span class="font-label-md text-label-md text-primary">Rp12.000</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fudgy, lembut, dan kaya rasa cokelat dengan lapisan atas yang renyah.</p>
+<a href="https://wa.me/6287757774025?text=*FORM ORDER CHERISH BITE*%0A%0AHalo kak%0ATerima kasih sudah tertarik dengan Cherish Bite!%0ASilakan isi format berikut untuk melakukan pemesanan%0A%0A━━━━━━━━━━━━━━━%0A%0A*Nama:*%0A%0A*Nomor WhatsApp:*%0A%0A*Alamat Pengiriman / COD:*%0A%0A*Pesanan:*%0A(Contoh: Brownies Bite 2 box, Cookies Bite 1 box)%0A%0A*Varian / Rasa:*%0A%0A*Jumlah Pesanan:*%0A%0A*Tanggal Pengambilan / Pengiriman:*%0A%0A*Metode Pembayaran:*%0A%0A* Transfer%0A* E-Wallet%0A* COD%0A%0A*Catatan Tambahan:*%0A(Contoh: request gift card, less sweet, packaging khusus, dll)%0A%0A━━━━━━━━━━━━━━━%0A%0ASetelah mengisi format, admin akan melakukan konfirmasi pesanan & total pembayaran%0A%0ATerima kasih sudah memilih Cherish Bite%0A“Tiny Bites, Big Happiness.”" target="_blank" class="w-full mt-sm py-3 border border-primary/20 rounded-2xl font-label-md text-label-md text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 inline-block text-center">Pesan Sekarang</a>
+</div>
+</div>
+<!-- Cookies Bite -->
+<div class="group product-card reveal" style="transition-delay: 200ms;">
+<div class="relative rounded-3xl overflow-hidden bg-surface-container-high aspect-[4/5] mb-md gallery-item">
+<img alt="Cookies Bite" class="w-full h-full object-cover" src="section-menu/cookies-bite.png"/>
+<span class="absolute top-4 right-4 bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full font-label-sm text-label-sm">Terlaris</span>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="quick-view-btn bg-surface text-primary px-lg py-3 rounded-2xl font-label-md text-label-md diffusion-shadow transform translate-y-4 group-hover:translate-y-0 transition-transform">Lihat Cepat</button>
+</div>
+</div>
+<div class="space-y-xs px-2">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md text-on-surface">Cookies Bite</h3>
+<span class="font-label-md text-label-md text-primary">Rp10.000</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Renyah di luar, kenyal di dalam, ukuran mini yang sempurna untuk camilan.</p>
+<a href="https://wa.me/6287757774025?text=*FORM ORDER CHERISH BITE*%0A%0AHalo kak%0ATerima kasih sudah tertarik dengan Cherish Bite!%0ASilakan isi format berikut untuk melakukan pemesanan%0A%0A━━━━━━━━━━━━━━━%0A%0A*Nama:*%0A%0A*Nomor WhatsApp:*%0A%0A*Alamat Pengiriman / COD:*%0A%0A*Pesanan:*%0A(Contoh: Brownies Bite 2 box, Cookies Bite 1 box)%0A%0A*Varian / Rasa:*%0A%0A*Jumlah Pesanan:*%0A%0A*Tanggal Pengambilan / Pengiriman:*%0A%0A*Metode Pembayaran:*%0A%0A* Transfer%0A* E-Wallet%0A* COD%0A%0A*Catatan Tambahan:*%0A(Contoh: request gift card, less sweet, packaging khusus, dll)%0A%0A━━━━━━━━━━━━━━━%0A%0ASetelah mengisi format, admin akan melakukan konfirmasi pesanan & total pembayaran%0A%0ATerima kasih sudah memilih Cherish Bite%0A“Tiny Bites, Big Happiness.”" target="_blank" class="w-full mt-sm py-3 border border-primary/20 rounded-2xl font-label-md text-label-md text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 inline-block text-center">Pesan Sekarang</a>
+</div>
+</div>
+<!-- Puding Caramel -->
+<div class="group product-card reveal" style="transition-delay: 300ms;">
+<div class="relative rounded-3xl overflow-hidden bg-surface-container-high aspect-[4/5] mb-md gallery-item">
+<img alt="Puding Caramel" class="w-full h-full object-cover" src="section-menu/puding-caramel.png"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="quick-view-btn bg-surface text-primary px-lg py-3 rounded-2xl font-label-md text-label-md diffusion-shadow transform translate-y-4 group-hover:translate-y-0 transition-transform">Lihat Cepat</button>
+</div>
+</div>
+<div class="space-y-xs px-2">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md text-on-surface">Puding Caramel</h3>
+<span class="font-label-md text-label-md text-primary">Rp8.000</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tekstur lembut, karamel kental, resep terinspirasi dari Gyukaku.</p>
+<a href="https://wa.me/6287757774025?text=*FORM ORDER CHERISH BITE*%0A%0AHalo kak%0ATerima kasih sudah tertarik dengan Cherish Bite!%0ASilakan isi format berikut untuk melakukan pemesanan%0A%0A━━━━━━━━━━━━━━━%0A%0A*Nama:*%0A%0A*Nomor WhatsApp:*%0A%0A*Alamat Pengiriman / COD:*%0A%0A*Pesanan:*%0A(Contoh: Brownies Bite 2 box, Cookies Bite 1 box)%0A%0A*Varian / Rasa:*%0A%0A*Jumlah Pesanan:*%0A%0A*Tanggal Pengambilan / Pengiriman:*%0A%0A*Metode Pembayaran:*%0A%0A* Transfer%0A* E-Wallet%0A* COD%0A%0A*Catatan Tambahan:*%0A(Contoh: request gift card, less sweet, packaging khusus, dll)%0A%0A━━━━━━━━━━━━━━━%0A%0ASetelah mengisi format, admin akan melakukan konfirmasi pesanan & total pembayaran%0A%0ATerima kasih sudah memilih Cherish Bite%0A“Tiny Bites, Big Happiness.”" target="_blank" class="w-full mt-sm py-3 border border-primary/20 rounded-2xl font-label-md text-label-md text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 inline-block text-center">Pesan Sekarang</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-2xl bg-surface-bright relative">
+<div class="caramel-drip" style="left: 20%; opacity: 0.05;"></div>
+<div class="max-width mx-auto px-lg">
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-lg">
+<div class="bg-surface p-lg rounded-3xl diffusion-shadow space-y-sm hover:-translate-y-2 transition-all duration-300 reveal" style="transition-delay: 100ms;">
+<div class="w-12 h-12 bg-primary-fixed rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 0;">restaurant</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface">Dibuat Segar</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dipanggang setiap hari untuk kualitas dan rasa terbaik.</p>
+</div>
+<div class="bg-surface p-lg rounded-3xl diffusion-shadow space-y-sm hover:-translate-y-2 transition-all duration-300 reveal" style="transition-delay: 200ms;">
+<div class="w-12 h-12 bg-secondary-fixed rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 0;">sentiment_very_satisfied</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface">Kebahagiaan Sekali Gigit</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Porsi kecil dengan ledakan rasa yang luar biasa.</p>
+</div>
+<div class="bg-surface p-lg rounded-3xl diffusion-shadow space-y-sm hover:-translate-y-2 transition-all duration-300 reveal" style="transition-delay: 300ms;">
+<div class="w-12 h-12 bg-tertiary-fixed rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface">Bahan-Bahan Premium</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hanya cokelat, mentega, dan krim terbaik yang kami gunakan.</p>
+</div>
+<div class="bg-surface p-lg rounded-3xl diffusion-shadow space-y-sm hover:-translate-y-2 transition-all duration-300 reveal" style="transition-delay: 400ms;">
+<div class="w-12 h-12 bg-secondary-fixed rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 0;">featured_seasonal_and_gifts</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface">Cocok Untuk Hadiah</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dikemas cantik untuk hari spesial orang tersayang.</p>
+</div>
+<div class="bg-surface p-lg rounded-3xl diffusion-shadow space-y-sm hover:-translate-y-2 transition-all duration-300 reveal" style="transition-delay: 500ms;">
+<div class="w-12 h-12 bg-primary-fixed rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 0;">home</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface">Rasa Rumahan</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dibuat dengan ketulusan dan kehangatan masakan rumah.</p>
+</div>
+<div class="bg-surface p-lg rounded-3xl diffusion-shadow space-y-sm hover:-translate-y-2 transition-all duration-300 reveal" style="transition-delay: 600ms;">
+<div class="w-12 h-12 bg-tertiary-fixed rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 0;">inventory_2</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface">Kemasan Estetik</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kotak kami sama cantiknya dengan isinya.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-2xl overflow-hidden bg-surface-container-lowest/50">
+<div class="max-width mx-auto px-lg">
+<div class="flex flex-col md:flex-row justify-between items-end mb-2xl gap-md">
+    <div class="reveal">
+        <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase">Komunitas</span>
+        <h2 class="font-headline-lg text-headline-lg text-on-surface">Apa Kata Penggemar Kami</h2>
+    </div>
+    <div class="flex gap-sm reveal" style="transition-delay: 100ms;">
+        <button id="prev-testimony" class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all">
+             <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+        <button id="next-testimony" class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all">
+            <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+    </div>
+</div>
+
+<div id="testimonial-container" class="flex gap-lg overflow-x-auto pb-xl snap-x no-scrollbar scroll-smooth">
+<!-- Testimony 1 -->
+<div class="min-w-[320px] md:min-w-[450px] bg-surface p-xl rounded-[2.5rem] snap-center diffusion-shadow border border-outline/5 reveal" style="transition-delay: 100ms;">
+    <div class="flex gap-1 text-secondary mb-md">
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+    </div>
+    <p class="font-body-lg text-body-lg italic text-on-surface mb-xl leading-relaxed">"Puding karamelnya benar-benar sempurna. Sangat lembut dan tidak terlalu manis. Persis seperti yang pernah saya coba di Tokyo!"</p>
+    <div class="flex items-center gap-sm">
+        <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center font-label-md text-primary">SJ</div>
+        <div>
+            <p class="font-label-md text-label-md">Sarah J.</p>
+            <p class="font-label-sm text-label-sm opacity-60">Pelanggan Terverifikasi</p>
+        </div>
+    </div>
+</div>
+
+<!-- Testimony 2 -->
+<div class="min-w-[320px] md:min-w-[450px] bg-surface p-xl rounded-[2.5rem] snap-center diffusion-shadow border border-outline/5 reveal" style="transition-delay: 200ms;">
+    <div class="flex gap-1 text-secondary mb-md">
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+    </div>
+    <p class="font-body-lg text-body-lg italic text-on-surface mb-xl leading-relaxed">"Brownies bite-nya bikin ketagihan. Awalnya beli satu kotak buat teman, tapi malah habis setengah saya makan sendiri. Nggak menyesal sama sekali!"</p>
+    <div class="flex items-center gap-sm">
+        <div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center font-label-md text-secondary">MK</div>
+        <div>
+            <p class="font-label-md text-label-md">Michael K.</p>
+            <p class="font-label-sm text-label-sm opacity-60">Pelanggan Terverifikasi</p>
+        </div>
+    </div>
+</div>
+
+<!-- Testimony 3 -->
+<div class="min-w-[320px] md:min-w-[450px] bg-surface p-xl rounded-[2.5rem] snap-center diffusion-shadow border border-outline/5 reveal" style="transition-delay: 300ms;">
+    <div class="flex gap-1 text-secondary mb-md">
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+    </div>
+    <p class="font-body-lg text-body-lg italic text-on-surface mb-xl leading-relaxed">"Suka banget sama kemasannya! Lucu dan siap buat kado. Cookies sea salt-nya punya perpaduan rasa asin dan manis yang pas."</p>
+    <div class="flex items-center gap-sm">
+        <div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center font-label-md text-tertiary">ER</div>
+        <div>
+            <p class="font-label-md text-label-md">Emily R.</p>
+            <p class="font-label-sm text-label-sm opacity-60">Pelanggan Terverifikasi</p>
+        </div>
+    </div>
+</div>
+
+<!-- Testimony 4 -->
+<div class="min-w-[320px] md:min-w-[450px] bg-surface p-xl rounded-[2.5rem] snap-center diffusion-shadow border border-outline/5 reveal" style="transition-delay: 400ms;">
+    <div class="flex gap-1 text-secondary mb-md">
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+    </div>
+    <p class="font-body-lg text-body-lg italic text-on-surface mb-xl leading-relaxed">"Teman belajar paling pas! Camilan seukuran gigitan ini bikin saya semangat nugas sampai malam. Sangat direkomendasikan!"</p>
+    <div class="flex items-center gap-sm">
+        <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center font-label-md text-primary">AN</div>
+        <div>
+            <p class="font-label-md text-label-md">Adi N.</p>
+            <p class="font-label-sm text-label-sm opacity-60">Pelanggan Terverifikasi</p>
+        </div>
+    </div>
+</div>
+
+<!-- Add Testimony Form Card -->
+<div class="min-w-[320px] md:min-w-[450px] bg-primary text-on-primary p-xl rounded-[2.5rem] snap-center diffusion-shadow flex flex-col justify-center reveal" style="transition-delay: 500ms;">
+    <h3 class="font-headline-md text-headline-md mb-sm text-center">Bagikan Kisahmu</h3>
+    <p class="font-body-sm text-body-sm mb-lg text-center opacity-80 text-on-primary">Bagaimana Cherish Bite memaniskan harimu?</p>
+    <form class="space-y-sm" id="testimony-form">
+        <div class="flex justify-center gap-1 mb-md" id="star-rating">
+            <button type="button" data-rating="1" class="material-symbols-outlined text-surface/40 hover:text-surface transition-colors cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</button>
+            <button type="button" data-rating="2" class="material-symbols-outlined text-surface/40 hover:text-surface transition-colors cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</button>
+            <button type="button" data-rating="3" class="material-symbols-outlined text-surface/40 hover:text-surface transition-colors cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</button>
+            <button type="button" data-rating="4" class="material-symbols-outlined text-surface/40 hover:text-surface transition-colors cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</button>
+            <button type="button" data-rating="5" class="material-symbols-outlined text-surface/40 hover:text-surface transition-colors cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</button>
+        </div>
+        <input type="hidden" name="rating" id="rating-value" value="5">
+        <input type="text" placeholder="Nama Anda" class="w-full px-lg py-3 rounded-2xl bg-white/10 border border-white/20 text-on-primary placeholder:text-white/40 focus:outline-none focus:bg-white/20 transition-all font-body-sm" required>
+        <textarea placeholder="Pesan Anda" rows="3" class="w-full px-lg py-3 rounded-2xl bg-white/10 border border-white/20 text-on-primary placeholder:text-white/40 focus:outline-none focus:bg-white/20 transition-all font-body-sm resize-none" required></textarea>
+        <button type="submit" class="w-full py-3 bg-surface text-primary rounded-2xl font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Kirim Ulasan</button>
+    </form>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Grid (Cherished Moments) -->
+<section class="py-2xl bg-surface-container-lowest" id="moments">
+<div class="max-width mx-auto px-lg"><h2 class="font-headline-lg text-headline-lg text-center mb-2xl text-on-surface reveal">Momen Berharga</h2><div class="grid grid-cols-1 md:grid-cols-3 gap-xl items-start"><!-- Image 1: Study Snack --><div class="relative group reveal rotate-[-2deg] hover:rotate-0 transition-transform duration-500"><div class="bg-white p-4 pb-12 shadow-xl rounded-sm"><img alt="Teman belajar terbaik" class="w-full aspect-square object-cover mb-4" src="customer-assets/customer-1.png"/><div class="absolute bottom-8 right-[-10px] bg-tertiary-fixed p-3 shadow-md rotate-[5deg] font-label-md text-on-tertiary-fixed">datang untuk memberikan kebahagiaan ✨</div></div></div><!-- Image 2: Group Friends --><div class="relative group reveal md:mt-12 rotate-[1deg] hover:rotate-0 transition-transform duration-500"><div class="bg-white p-4 pb-12 shadow-xl rounded-sm"><img alt="Gigitan kecil, kenyamanan luar biasa" class="w-full aspect-[4/5] object-cover mb-4" src="customer-assets/customer-2.png"/><div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary-fixed p-3 shadow-md -rotate-[2deg] font-label-md text-on-secondary-fixed whitespace-nowrap">Gigitan kecil, kenyamanan luar biasa ✨</div></div></div><!-- Image 3: Gifting --><div class="relative group reveal rotate-[-1deg] hover:rotate-0 transition-transform duration-500"><div class="bg-white p-4 pb-12 shadow-xl rounded-sm"><img alt="Pas untuk kado" class="w-full aspect-square object-cover mb-4" src="customer-assets/customer-3.png"/><div class="absolute bottom-4 left-4 bg-primary-fixed p-3 shadow-md rotate-[-3deg] font-label-md text-on-primary-fixed">Pas untuk kado! 🎁</div></div></div></div><div class="mt-xl text-center reveal"><div class="inline-block bg-primary-fixed/30 px-lg py-sm rounded-full"><p class="font-headline-md text-on-primary-fixed">Yuk gabung dengan komunitas kami @cherishbite</p></div></div></div>
+</section>
+<!-- Final CTA -->
+<section class="py-2xl relative overflow-hidden" id="contact">
+<div class="max-width mx-auto px-lg text-center relative z-10 reveal">
+<div class="bg-surface-container-high rounded-[3rem] p-2xl space-y-lg diffusion-shadow relative overflow-hidden">
+<div class="caramel-drip" style="opacity: 0.15; top: -10px;"></div>
+<h2 class="font-headline-xl text-headline-xl text-primary">Siap Memaniskan Harimu?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Baik itu kado untuk seseorang atau camilan untuk diri sendiri, gigitan kecil kami siap membahagiakanmu. Pesan via WhatsApp atau ikuti perjalanan kami di Instagram.
+                </p>
+<div class="flex flex-col sm:flex-row gap-md justify-center pt-md">
+<a class="inline-flex items-center justify-center gap-sm px-xl py-4 bg-primary text-on-primary rounded-2xl font-label-md text-label-md hover:opacity-90 transition-all btn-pulse" href="https://wa.me/6287757774025" target="_blank">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                        Pesan via WhatsApp
+                    </a>
+<a class="inline-flex items-center justify-center gap-sm px-xl py-4 border-2 border-primary text-primary rounded-2xl font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all" href="mailto:putrisevinaaprillia07@gmail.com">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mail</span>
+                        Email Kami
+                    </a>
+</div>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="absolute top-1/2 left-0 w-64 h-64 bg-secondary-fixed/30 blur-[100px] -translate-y-1/2 -z-0"></div>
+<div class="absolute bottom-0 right-0 w-96 h-96 bg-primary-fixed/30 blur-[120px] translate-y-1/2 -z-0"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-low dark:bg-inverse-surface border-t border-outline/10">
+<div class="max-w-[1200px] mx-auto px-lg py-2xl grid grid-cols-1 md:grid-cols-3 gap-xl">
+<div class="space-y-md">
+<div class="flex items-center gap-2">
+<img alt="Cherish Bite Logo" class="h-12 w-12 object-contain" src="LOGO.png"/>
+<span class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed-dim">Cherish Bite</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-outline-variant max-w-xs">
+                Dessert buatan tangan yang mengutamakan rasa dan estetika. Dibuat segar setiap hari.
+            </p>
+<div class="flex gap-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a id="share-trigger" class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer" title="Bagikan"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="mailto:putrisevinaaprillia07@gmail.com" title="Email Kami"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-lg">
+<div class="space-y-md">
+<h5 class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Tautan Cepat</h5>
+<ul class="space-y-sm">
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all inline-block" href="#shop">Semua Menu</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all inline-block" href="#about">Kisah Kami</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all inline-block" href="#contact">Hubungi Kami</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all inline-block" href="#moments">Momen Kami</a></li>
+</ul>
+</div>
+<div class="space-y-md">
+<h5 class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Bantuan</h5>
+<ul class="space-y-sm">
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all inline-block" href="#">Kebijakan Privasi</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all inline-block" href="#">Ketentuan Layanan</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all inline-block" href="#contact">Hubungi Kami</a></li>
+</ul>
+</div>
+</div>
+<div class="space-y-md">
+<h5 class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Jam Operasional</h5>
+<div class="space-y-xs">
+<p class="font-body-sm text-body-sm text-on-surface-variant flex justify-between"><span>at Sunday Market Madiun</span> <span>08.00 - 10.00</span></p>
+</div>
+<div class="pt-md">
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-60">© 2026 Cherish Bite. Dibuat dengan cinta.</p>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- Lihat Cepat Modal -->
+<div id="quick-view-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-on-surface/40 backdrop-blur-sm p-lg">
+    <div class="bg-surface max-w-2xl w-full rounded-[2rem] overflow-hidden relative diffusion-shadow reveal active">
+        <button id="close-modal" class="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-surface/80 backdrop-blur-md rounded-full text-on-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="aspect-square w-full">
+            <img id="modal-image" src="" alt="Pratinjau Produk" class="w-full h-full object-cover">
+        </div>
+    </div>
+</div>
+
+<!-- Share Modal -->
+<div id="share-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-on-surface/40 backdrop-blur-sm p-lg">
+    <div class="bg-surface max-w-sm w-full rounded-[2.5rem] p-xl relative diffusion-shadow reveal active">
+        <button id="close-share" class="absolute top-4 right-4 text-on-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <h3 class="font-headline-md text-headline-md text-primary text-center mb-xl">Bagikan Cherish Bite</h3>
+        <div class="grid grid-cols-2 gap-md">
+            <a href="https://wa.me/?text=Cek%20dessert%20enak%20di%20Cherish%20Bite!%20" target="_blank" class="flex flex-col items-center gap-sm p-md rounded-3xl bg-surface-container-low hover:bg-primary-fixed transition-all group">
+                <div class="w-12 h-12 rounded-full bg-primary-fixed group-hover:bg-white flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined">chat</span>
+                </div>
+                <span class="font-label-md text-label-md">WhatsApp</span>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="flex flex-col items-center gap-sm p-md rounded-3xl bg-surface-container-low hover:bg-secondary-fixed transition-all group">
+                <div class="w-12 h-12 rounded-full bg-secondary-fixed group-hover:bg-white flex items-center justify-center text-secondary">
+                    <span class="material-symbols-outlined">camera</span>
+                </div>
+                <span class="font-label-md text-label-md">Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" class="flex flex-col items-center gap-sm p-md rounded-3xl bg-surface-container-low hover:bg-surface-variant transition-all group">
+                <div class="w-12 h-12 rounded-full bg-inverse-surface flex items-center justify-center text-white">
+                    <span class="material-symbols-outlined">play_circle</span>
+                </div>
+                <span class="font-label-md text-label-md">TikTok</span>
+            </a>
+            <button id="copy-link" class="flex flex-col items-center gap-sm p-md rounded-3xl bg-surface-container-low hover:bg-tertiary-fixed transition-all group">
+                <div class="w-12 h-12 rounded-full bg-tertiary-fixed group-hover:bg-white flex items-center justify-center text-tertiary">
+                    <span class="material-symbols-outlined">content_copy</span>
+                </div>
+                <span class="font-label-md text-label-md">Salin Tautan</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Navbar Scroll Transition
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.classList.add('bg-surface/90', 'glass-nav', 'shadow-sm');
+            nav.classList.remove('bg-transparent');
+        } else {
+            nav.classList.remove('bg-surface/90', 'glass-nav', 'shadow-sm');
+            nav.classList.add('bg-transparent');
+        }
+    });
+
+    // Intersection Observer for Entrance Animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    // Apply observer to all reveal elements
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Carousel horizontal scroll handling (mouse wheel)
+    const scrollContainer = document.querySelector('.no-scrollbar');
+    if (scrollContainer) {
+        scrollContainer.addEventListener('wheel', (evt) => {
+            if (evt.deltaY != 0) {
+                evt.preventDefault();
+                scrollContainer.scrollLeft += evt.deltaY;
+            }
+        });
+    }
+
+    // Testimonial Horizontal Scroll Buttons
+    const testimonialContainer = document.getElementById('testimonial-container');
+    const prevBtn = document.getElementById('prev-testimony');
+    const nextBtn = document.getElementById('next-testimony');
+
+    if (testimonialContainer && prevBtn && nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            testimonialContainer.scrollBy({ left: 400, behavior: 'smooth' });
+        });
+        prevBtn.addEventListener('click', () => {
+            testimonialContainer.scrollBy({ left: -400, behavior: 'smooth' });
+        });
+    }
+
+    // Testimony Form Submission (Simulation)
+    const testimonyForm = document.getElementById('testimony-form');
+    const starRating = document.getElementById('star-rating');
+    const ratingInput = document.getElementById('rating-value');
+
+    if (starRating && ratingInput) {
+        const stars = starRating.querySelectorAll('button');
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = star.getAttribute('data-rating');
+                ratingInput.value = rating;
+                stars.forEach(s => {
+                    if (s.getAttribute('data-rating') <= rating) {
+                        s.classList.replace('text-surface/40', 'text-surface');
+                    } else {
+                        s.classList.replace('text-surface', 'text-surface/40');
+                    }
+                });
+            });
+        });
+    }
+
+    if (testimonyForm) {
+        testimonyForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = testimonyForm.querySelector('input[type="text"]').value;
+            const message = testimonyForm.querySelector('textarea').value;
+            const rating = parseInt(ratingInput.value);
+            const initials = name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
+
+            let starHtml = '';
+            for (let i = 0; i < 5; i++) {
+                starHtml += `<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' ${i < rating ? 1 : 0};">${i < rating ? 'star' : 'star'}</span>`;
+            }
+
+            // Create new testimony card
+            const newCard = document.createElement('div');
+            newCard.className = 'min-w-[320px] md:min-w-[450px] bg-surface p-xl rounded-[2.5rem] snap-center diffusion-shadow border border-outline/5 active';
+            newCard.innerHTML = `
+                <div class="flex gap-1 text-secondary mb-md">
+                    ${starHtml}
+                </div>
+                <p class="font-body-lg text-body-lg italic text-on-surface mb-xl leading-relaxed">"${message}"</p>
+                <div class="flex items-center gap-sm">
+                    <div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center font-label-md text-tertiary">${initials || '??'}</div>
+                    <div>
+                        <p class="font-label-md text-label-md">${name}</p>
+                        <p class="font-label-sm text-label-sm opacity-60">Pelanggan Terverifikasi</p>
+                    </div>
+                </div>
+            `;
+
+            // Insert before the form card
+            testimonialContainer.insertBefore(newCard, testimonyForm.closest('div'));
+            
+            // Reset
+            testimonyForm.reset();
+            ratingInput.value = "5";
+            starRating.querySelectorAll('button').forEach(s => s.classList.replace('text-surface/40', 'text-surface'));
+            
+            testimonialContainer.scrollTo({ left: 0, behavior: 'smooth' });
+            alert('Terima kasih atas ulasan manisnya!');
+        });
+    }
+
+    // Lihat Cepat Modal Logic
+    const modal = document.getElementById('quick-view-modal');
+    const modalImg = document.getElementById('modal-image');
+    const closeBtn = document.getElementById('close-modal');
+
+    if (modal && modalImg && closeBtn) {
+        document.querySelectorAll('.quick-view-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const productCard = e.currentTarget.closest('.product-card');
+                const img = productCard.querySelector('img');
+                if (img) {
+                    modalImg.src = img.src;
+                    modalImg.alt = img.alt;
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        const closeModal = () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        };
+
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        // Close on Escape key
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    }
+
+    // Share Modal Logic
+    const shareModal = document.getElementById('share-modal');
+    const shareTrigger = document.getElementById('share-trigger');
+    const closeShare = document.getElementById('close-share');
+    const copyLinkBtn = document.getElementById('copy-link');
+
+    if (shareModal && shareTrigger && closeShare) {
+        shareTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            shareModal.classList.remove('hidden');
+            shareModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const closeShareModal = () => {
+            shareModal.classList.add('hidden');
+            shareModal.classList.remove('flex');
+            document.body.style.overflow = '';
+        };
+
+        closeShare.addEventListener('click', closeShareModal);
+        shareModal.addEventListener('click', (e) => {
+            if (e.target === shareModal) closeShareModal();
+        });
+
+        if (copyLinkBtn) {
+            copyLinkBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    const originalText = copyLinkBtn.querySelector('.font-label-md').textContent;
+                    copyLinkBtn.querySelector('.font-label-md').textContent = 'Tersalin!';
+                    setTimeout(() => {
+                        copyLinkBtn.querySelector('.font-label-md').textContent = originalText;
+                    }, 2000);
+                });
+            });
+        }
+    }
+</script>
+</body></html>>>>>>
