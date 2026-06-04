@@ -119,6 +119,9 @@
         .hero-gradient {
             background: radial-gradient(circle at top right, rgba(254, 221, 179, 0.3) 0%, rgba(253, 248, 245, 0) 70%);
         }
+        .max-width {
+            max-width: 1200px;
+        }
         
         /* Floating Animations */
         @keyframes floating {
@@ -219,6 +222,12 @@
             Pesan Sekarang
         </a>
 </nav>
+<nav aria-label="Navigasi mobile" class="md:hidden max-w-[1200px] mx-auto px-lg pb-sm -mt-2 flex gap-sm overflow-x-auto no-scrollbar">
+<a class="shrink-0 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-4 py-2 rounded-full" href="#shop">Menu</a>
+<a class="shrink-0 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-4 py-2 rounded-full" href="#about">Kisah Kami</a>
+<a class="shrink-0 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-4 py-2 rounded-full" href="#moments">Momen Kami</a>
+<a class="shrink-0 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-4 py-2 rounded-full" href="#contact">Kontak</a>
+</nav>
 </header>
 <main class="pt-0">
 <!-- Hero Section -->
@@ -245,7 +254,7 @@
 <div class="absolute -bottom-6 -left-12 p-sm bg-surface rounded-2xl diffusion-shadow floating-anim-slow hidden lg:block border border-outline/5">
 <div class="flex items-center gap-sm">
 <div class="w-12 h-12 rounded-xl bg-primary-fixed overflow-hidden">
-<img alt="Cookie Mini" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhVTJo8sQB4hzdQHKWOynzFKk4oQVW_kcXm9IWkPqAdXAXOTwZcRTsG1FZYLgkDIQZsuvfbgEaeWNHkY1LRdYE2o9pAoYF639nAIyByFyF-OnQEhS9-UiRVFSVbAhIFvvPYIhW3UXHR9SToVmjwZ1IkUdUSBQl4CZFgi2fpyY87Gy5ifN8ybkd_7vX1vjXogtSiC4XTqvEHyOysVEyKw2GOrbC-xpMORYZFJuevy_BtNNJot8mvbKQRNMA"/>
+<img alt="Cookie Mini" class="w-full h-full object-cover" src="section-menu/cookies-bite.png"/>
 </div>
 <div>
 <p class="font-label-md text-label-md text-primary">Varian Baru!</p>
@@ -301,7 +310,7 @@
 <div class="relative rounded-3xl overflow-hidden bg-surface-container-high aspect-[4/5] mb-md gallery-item">
 <img alt="Brownies Bite" class="w-full h-full object-cover" src="section-menu/brownies-bite.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<button class="quick-view-btn bg-surface text-primary px-lg py-3 rounded-2xl font-label-md text-label-md diffusion-shadow transform translate-y-4 group-hover:translate-y-0 transition-transform">Lihat Cepat</button>
+<button aria-label="Lihat cepat Brownies Bite" class="quick-view-btn bg-surface text-primary px-lg py-3 rounded-2xl font-label-md text-label-md diffusion-shadow transform translate-y-4 group-hover:translate-y-0 transition-transform">Lihat Cepat</button>
 </div>
 </div>
 <div class="space-y-xs px-2">
@@ -310,7 +319,7 @@
 <span class="font-label-md text-label-md text-primary">Rp12.000</span>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant">Fudgy, lembut, dan kaya rasa cokelat dengan lapisan atas yang renyah.</p>
-<a href="https://wa.me/6287757774025?text=*FORM ORDER CHERISH BITE*%0A%0AHalo kak%0ATerima kasih sudah tertarik dengan Cherish Bite!%0ASilakan isi format berikut untuk melakukan pemesanan%0A%0A━━━━━━━━━━━━━━━%0A%0A*Nama:*%0A%0A*Nomor WhatsApp:*%0A%0A*Alamat Pengiriman / COD:*%0A%0A*Pesanan:*%0A(Contoh: Brownies Bite 2 box, Cookies Bite 1 box)%0A%0A*Varian / Rasa:*%0A%0A*Jumlah Pesanan:*%0A%0A*Tanggal Pengambilan / Pengiriman:*%0A%0A*Metode Pembayaran:*%0A%0A* Transfer%0A* E-Wallet%0A* COD%0A%0A*Catatan Tambahan:*%0A(Contoh: request gift card, less sweet, packaging khusus, dll)%0A%0A━━━━━━━━━━━━━━━%0A%0ASetelah mengisi format, admin akan melakukan konfirmasi pesanan & total pembayaran%0A%0ATerima kasih sudah memilih Cherish Bite%0A“Tiny Bites, Big Happiness.”" target="_blank" class="w-full mt-sm py-3 border border-primary/20 rounded-2xl font-label-md text-label-md text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 inline-block text-center">Pesan Sekarang</a>
+<a href="https://wa.me/6287757774025?text=*FORM ORDER CHERISH BITE*%0A%0AHalo kak%0ATerima kasih sudah tertarik dengan Cherish Bite!%0ASilakan isi format berikut untuk melakukan pemesanan%0A%0A━━━━━━━━━━━━━━━%0A%0A*Nama:*%0A%0A*Nomor WhatsApp:*%0A%0A*Alamat Pengiriman / COD:*%0A%0A*Pesanan:*%0A(Contoh: Brownies Bite 2 box, Cookies Bite 1 box)%0A%0A*Varian / Rasa:*%0A%0A*Jumlah Pesanan:*%0A%0A*Tanggal Pengambilan / Pengiriman:*%0A%0A*Metode Pembayaran:*%0A%0A* Transfer%0A* E-Wallet%0A* COD%0A%0A*Catatan Tambahan:*%0A(Contoh: request gift card, less sweet, packaging khusus, dll)%0A%0A━━━━━━━━━━━━━━━%0A%0ASetelah mengisi format, admin akan melakukan konfirmasi pesanan & total pembayaran%0A%0ATerima kasih sudah memilih Cherish Bite%0A“Tiny Bites, Big Happiness.”" target="_blank" rel="noopener noreferrer" class="w-full mt-sm py-3 border border-primary/20 rounded-2xl font-label-md text-label-md text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 inline-block text-center">Pesan Sekarang</a>
 </div>
 </div>
 <!-- Cookies Bite -->
@@ -319,7 +328,7 @@
 <img alt="Cookies Bite" class="w-full h-full object-cover" src="section-menu/cookies-bite.png"/>
 <span class="absolute top-4 right-4 bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full font-label-sm text-label-sm">Terlaris</span>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<button class="quick-view-btn bg-surface text-primary px-lg py-3 rounded-2xl font-label-md text-label-md diffusion-shadow transform translate-y-4 group-hover:translate-y-0 transition-transform">Lihat Cepat</button>
+<button aria-label="Lihat cepat Cookies Bite" class="quick-view-btn bg-surface text-primary px-lg py-3 rounded-2xl font-label-md text-label-md diffusion-shadow transform translate-y-4 group-hover:translate-y-0 transition-transform">Lihat Cepat</button>
 </div>
 </div>
 <div class="space-y-xs px-2">
@@ -328,7 +337,7 @@
 <span class="font-label-md text-label-md text-primary">Rp10.000</span>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant">Renyah di luar, kenyal di dalam, ukuran mini yang sempurna untuk camilan.</p>
-<a href="https://wa.me/6287757774025?text=*FORM ORDER CHERISH BITE*%0A%0AHalo kak%0ATerima kasih sudah tertarik dengan Cherish Bite!%0ASilakan isi format berikut untuk melakukan pemesanan%0A%0A━━━━━━━━━━━━━━━%0A%0A*Nama:*%0A%0A*Nomor WhatsApp:*%0A%0A*Alamat Pengiriman / COD:*%0A%0A*Pesanan:*%0A(Contoh: Brownies Bite 2 box, Cookies Bite 1 box)%0A%0A*Varian / Rasa:*%0A%0A*Jumlah Pesanan:*%0A%0A*Tanggal Pengambilan / Pengiriman:*%0A%0A*Metode Pembayaran:*%0A%0A* Transfer%0A* E-Wallet%0A* COD%0A%0A*Catatan Tambahan:*%0A(Contoh: request gift card, less sweet, packaging khusus, dll)%0A%0A━━━━━━━━━━━━━━━%0A%0ASetelah mengisi format, admin akan melakukan konfirmasi pesanan & total pembayaran%0A%0ATerima kasih sudah memilih Cherish Bite%0A“Tiny Bites, Big Happiness.”" target="_blank" class="w-full mt-sm py-3 border border-primary/20 rounded-2xl font-label-md text-label-md text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 inline-block text-center">Pesan Sekarang</a>
+<a href="https://wa.me/6287757774025?text=*FORM ORDER CHERISH BITE*%0A%0AHalo kak%0ATerima kasih sudah tertarik dengan Cherish Bite!%0ASilakan isi format berikut untuk melakukan pemesanan%0A%0A━━━━━━━━━━━━━━━%0A%0A*Nama:*%0A%0A*Nomor WhatsApp:*%0A%0A*Alamat Pengiriman / COD:*%0A%0A*Pesanan:*%0A(Contoh: Brownies Bite 2 box, Cookies Bite 1 box)%0A%0A*Varian / Rasa:*%0A%0A*Jumlah Pesanan:*%0A%0A*Tanggal Pengambilan / Pengiriman:*%0A%0A*Metode Pembayaran:*%0A%0A* Transfer%0A* E-Wallet%0A* COD%0A%0A*Catatan Tambahan:*%0A(Contoh: request gift card, less sweet, packaging khusus, dll)%0A%0A━━━━━━━━━━━━━━━%0A%0ASetelah mengisi format, admin akan melakukan konfirmasi pesanan & total pembayaran%0A%0ATerima kasih sudah memilih Cherish Bite%0A“Tiny Bites, Big Happiness.”" target="_blank" rel="noopener noreferrer" class="w-full mt-sm py-3 border border-primary/20 rounded-2xl font-label-md text-label-md text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 inline-block text-center">Pesan Sekarang</a>
 </div>
 </div>
 <!-- Puding Caramel -->
@@ -336,7 +345,7 @@
 <div class="relative rounded-3xl overflow-hidden bg-surface-container-high aspect-[4/5] mb-md gallery-item">
 <img alt="Puding Caramel" class="w-full h-full object-cover" src="section-menu/puding-caramel.png"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<button class="quick-view-btn bg-surface text-primary px-lg py-3 rounded-2xl font-label-md text-label-md diffusion-shadow transform translate-y-4 group-hover:translate-y-0 transition-transform">Lihat Cepat</button>
+<button aria-label="Lihat cepat Puding Caramel" class="quick-view-btn bg-surface text-primary px-lg py-3 rounded-2xl font-label-md text-label-md diffusion-shadow transform translate-y-4 group-hover:translate-y-0 transition-transform">Lihat Cepat</button>
 </div>
 </div>
 <div class="space-y-xs px-2">
@@ -345,7 +354,7 @@
 <span class="font-label-md text-label-md text-primary">Rp8.000</span>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant">Tekstur lembut, karamel kental, resep terinspirasi dari Gyukaku.</p>
-<a href="https://wa.me/6287757774025?text=*FORM ORDER CHERISH BITE*%0A%0AHalo kak%0ATerima kasih sudah tertarik dengan Cherish Bite!%0ASilakan isi format berikut untuk melakukan pemesanan%0A%0A━━━━━━━━━━━━━━━%0A%0A*Nama:*%0A%0A*Nomor WhatsApp:*%0A%0A*Alamat Pengiriman / COD:*%0A%0A*Pesanan:*%0A(Contoh: Brownies Bite 2 box, Cookies Bite 1 box)%0A%0A*Varian / Rasa:*%0A%0A*Jumlah Pesanan:*%0A%0A*Tanggal Pengambilan / Pengiriman:*%0A%0A*Metode Pembayaran:*%0A%0A* Transfer%0A* E-Wallet%0A* COD%0A%0A*Catatan Tambahan:*%0A(Contoh: request gift card, less sweet, packaging khusus, dll)%0A%0A━━━━━━━━━━━━━━━%0A%0ASetelah mengisi format, admin akan melakukan konfirmasi pesanan & total pembayaran%0A%0ATerima kasih sudah memilih Cherish Bite%0A“Tiny Bites, Big Happiness.”" target="_blank" class="w-full mt-sm py-3 border border-primary/20 rounded-2xl font-label-md text-label-md text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 inline-block text-center">Pesan Sekarang</a>
+<a href="https://wa.me/6287757774025?text=*FORM ORDER CHERISH BITE*%0A%0AHalo kak%0ATerima kasih sudah tertarik dengan Cherish Bite!%0ASilakan isi format berikut untuk melakukan pemesanan%0A%0A━━━━━━━━━━━━━━━%0A%0A*Nama:*%0A%0A*Nomor WhatsApp:*%0A%0A*Alamat Pengiriman / COD:*%0A%0A*Pesanan:*%0A(Contoh: Brownies Bite 2 box, Cookies Bite 1 box)%0A%0A*Varian / Rasa:*%0A%0A*Jumlah Pesanan:*%0A%0A*Tanggal Pengambilan / Pengiriman:*%0A%0A*Metode Pembayaran:*%0A%0A* Transfer%0A* E-Wallet%0A* COD%0A%0A*Catatan Tambahan:*%0A(Contoh: request gift card, less sweet, packaging khusus, dll)%0A%0A━━━━━━━━━━━━━━━%0A%0ASetelah mengisi format, admin akan melakukan konfirmasi pesanan & total pembayaran%0A%0ATerima kasih sudah memilih Cherish Bite%0A“Tiny Bites, Big Happiness.”" target="_blank" rel="noopener noreferrer" class="w-full mt-sm py-3 border border-primary/20 rounded-2xl font-label-md text-label-md text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 inline-block text-center">Pesan Sekarang</a>
 </div>
 </div>
 </div>
@@ -410,10 +419,10 @@
         <h2 class="font-headline-lg text-headline-lg text-on-surface">Apa Kata Penggemar Kami</h2>
     </div>
     <div class="flex gap-sm reveal" style="transition-delay: 100ms;">
-        <button id="prev-testimony" class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all">
+        <button id="prev-testimony" aria-label="Testimoni sebelumnya" class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all">
              <span class="material-symbols-outlined">chevron_left</span>
         </button>
-        <button id="next-testimony" class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all">
+        <button id="next-testimony" aria-label="Testimoni berikutnya" class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all">
             <span class="material-symbols-outlined">chevron_right</span>
         </button>
     </div>
@@ -502,11 +511,11 @@
     <p class="font-body-sm text-body-sm mb-lg text-center opacity-80 text-on-primary">Bagaimana Cherish Bite memaniskan harimu?</p>
     <form class="space-y-sm" id="testimony-form">
         <div class="flex justify-center gap-1 mb-md" id="star-rating">
-            <button type="button" data-rating="1" class="material-symbols-outlined text-surface/40 hover:text-surface transition-colors cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</button>
-            <button type="button" data-rating="2" class="material-symbols-outlined text-surface/40 hover:text-surface transition-colors cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</button>
-            <button type="button" data-rating="3" class="material-symbols-outlined text-surface/40 hover:text-surface transition-colors cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</button>
-            <button type="button" data-rating="4" class="material-symbols-outlined text-surface/40 hover:text-surface transition-colors cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</button>
-            <button type="button" data-rating="5" class="material-symbols-outlined text-surface/40 hover:text-surface transition-colors cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</button>
+            <button type="button" data-rating="1" aria-label="Beri rating 1 bintang" class="material-symbols-outlined text-surface hover:text-surface transition-colors cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</button>
+            <button type="button" data-rating="2" aria-label="Beri rating 2 bintang" class="material-symbols-outlined text-surface hover:text-surface transition-colors cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</button>
+            <button type="button" data-rating="3" aria-label="Beri rating 3 bintang" class="material-symbols-outlined text-surface hover:text-surface transition-colors cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</button>
+            <button type="button" data-rating="4" aria-label="Beri rating 4 bintang" class="material-symbols-outlined text-surface hover:text-surface transition-colors cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</button>
+            <button type="button" data-rating="5" aria-label="Beri rating 5 bintang" class="material-symbols-outlined text-surface hover:text-surface transition-colors cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</button>
         </div>
         <input type="hidden" name="rating" id="rating-value" value="5">
         <input type="text" placeholder="Nama Anda" class="w-full px-lg py-3 rounded-2xl bg-white/10 border border-white/20 text-on-primary placeholder:text-white/40 focus:outline-none focus:bg-white/20 transition-all font-body-sm" required>
@@ -531,7 +540,7 @@
                     Baik itu kado untuk seseorang atau camilan untuk diri sendiri, gigitan kecil kami siap membahagiakanmu. Pesan via WhatsApp atau ikuti perjalanan kami di Instagram.
                 </p>
 <div class="flex flex-col sm:flex-row gap-md justify-center pt-md">
-<a class="inline-flex items-center justify-center gap-sm px-xl py-4 bg-primary text-on-primary rounded-2xl font-label-md text-label-md hover:opacity-90 transition-all btn-pulse" href="https://wa.me/6287757774025" target="_blank">
+<a class="inline-flex items-center justify-center gap-sm px-xl py-4 bg-primary text-on-primary rounded-2xl font-label-md text-label-md hover:opacity-90 transition-all btn-pulse" href="https://wa.me/6287757774025" target="_blank" rel="noopener noreferrer">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
                         Pesan via WhatsApp
                     </a>
@@ -559,7 +568,7 @@
                 Dessert buatan tangan yang mengutamakan rasa dan estetika. Dibuat segar setiap hari.
             </p>
 <div class="flex gap-md">
-<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#contact" aria-label="Kontak Cherish Bite"><span class="material-symbols-outlined">public</span></a>
 <a id="share-trigger" class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer" title="Bagikan"><span class="material-symbols-outlined">share</span></a>
 <a class="text-on-surface-variant hover:text-primary transition-colors" href="mailto:putrisevinaaprillia07@gmail.com" title="Email Kami"><span class="material-symbols-outlined">mail</span></a>
 </div>
@@ -577,8 +586,8 @@
 <div class="space-y-md">
 <h5 class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Bantuan</h5>
 <ul class="space-y-sm">
-<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all inline-block" href="#">Kebijakan Privasi</a></li>
-<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all inline-block" href="#">Ketentuan Layanan</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all inline-block" href="#contact">Kebijakan Privasi</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all inline-block" href="#contact">Ketentuan Layanan</a></li>
 <li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all inline-block" href="#contact">Hubungi Kami</a></li>
 </ul>
 </div>
@@ -598,7 +607,7 @@
 <!-- Lihat Cepat Modal -->
 <div id="quick-view-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-on-surface/40 backdrop-blur-sm p-lg">
     <div class="bg-surface max-w-2xl w-full rounded-[2rem] overflow-hidden relative diffusion-shadow reveal active">
-        <button id="close-modal" class="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-surface/80 backdrop-blur-md rounded-full text-on-surface-variant hover:text-primary transition-colors">
+        <button id="close-modal" aria-label="Tutup pratinjau produk" class="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-surface/80 backdrop-blur-md rounded-full text-on-surface-variant hover:text-primary transition-colors">
             <span class="material-symbols-outlined">close</span>
         </button>
         <div class="aspect-square w-full">
@@ -610,30 +619,30 @@
 <!-- Share Modal -->
 <div id="share-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-on-surface/40 backdrop-blur-sm p-lg">
     <div class="bg-surface max-w-sm w-full rounded-[2.5rem] p-xl relative diffusion-shadow reveal active">
-        <button id="close-share" class="absolute top-4 right-4 text-on-surface-variant hover:text-primary transition-colors">
+        <button id="close-share" aria-label="Tutup dialog bagikan" class="absolute top-4 right-4 text-on-surface-variant hover:text-primary transition-colors">
             <span class="material-symbols-outlined">close</span>
         </button>
         <h3 class="font-headline-md text-headline-md text-primary text-center mb-xl">Bagikan Cherish Bite</h3>
         <div class="grid grid-cols-2 gap-md">
-            <a href="https://wa.me/?text=Cek%20dessert%20enak%20di%20Cherish%20Bite!%20" target="_blank" class="flex flex-col items-center gap-sm p-md rounded-3xl bg-surface-container-low hover:bg-primary-fixed transition-all group">
+            <a href="https://wa.me/?text=Cek%20dessert%20enak%20di%20Cherish%20Bite!%20" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-sm p-md rounded-3xl bg-surface-container-low hover:bg-primary-fixed transition-all group">
                 <div class="w-12 h-12 rounded-full bg-primary-fixed group-hover:bg-white flex items-center justify-center text-primary">
                     <span class="material-symbols-outlined">chat</span>
                 </div>
                 <span class="font-label-md text-label-md">WhatsApp</span>
             </a>
-            <a href="https://www.instagram.com/" target="_blank" class="flex flex-col items-center gap-sm p-md rounded-3xl bg-surface-container-low hover:bg-secondary-fixed transition-all group">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-sm p-md rounded-3xl bg-surface-container-low hover:bg-secondary-fixed transition-all group">
                 <div class="w-12 h-12 rounded-full bg-secondary-fixed group-hover:bg-white flex items-center justify-center text-secondary">
                     <span class="material-symbols-outlined">camera</span>
                 </div>
                 <span class="font-label-md text-label-md">Instagram</span>
             </a>
-            <a href="https://www.tiktok.com/" target="_blank" class="flex flex-col items-center gap-sm p-md rounded-3xl bg-surface-container-low hover:bg-surface-variant transition-all group">
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-sm p-md rounded-3xl bg-surface-container-low hover:bg-surface-variant transition-all group">
                 <div class="w-12 h-12 rounded-full bg-inverse-surface flex items-center justify-center text-white">
                     <span class="material-symbols-outlined">play_circle</span>
                 </div>
                 <span class="font-label-md text-label-md">TikTok</span>
             </a>
-            <button id="copy-link" class="flex flex-col items-center gap-sm p-md rounded-3xl bg-surface-container-low hover:bg-tertiary-fixed transition-all group">
+            <button id="copy-link" aria-label="Salin tautan halaman" class="flex flex-col items-center gap-sm p-md rounded-3xl bg-surface-container-low hover:bg-tertiary-fixed transition-all group">
                 <div class="w-12 h-12 rounded-full bg-tertiary-fixed group-hover:bg-white flex items-center justify-center text-tertiary">
                     <span class="material-symbols-outlined">content_copy</span>
                 </div>
@@ -672,17 +681,6 @@
 
     // Apply observer to all reveal elements
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Carousel horizontal scroll handling (mouse wheel)
-    const scrollContainer = document.querySelector('.no-scrollbar');
-    if (scrollContainer) {
-        scrollContainer.addEventListener('wheel', (evt) => {
-            if (evt.deltaY != 0) {
-                evt.preventDefault();
-                scrollContainer.scrollLeft += evt.deltaY;
-            }
-        });
-    }
 
     // Testimonial Horizontal Scroll Buttons
     const testimonialContainer = document.getElementById('testimonial-container');
@@ -723,32 +721,47 @@
     if (testimonyForm) {
         testimonyForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const name = testimonyForm.querySelector('input[type="text"]').value;
-            const message = testimonyForm.querySelector('textarea').value;
+            const name = testimonyForm.querySelector('input[type="text"]').value.trim();
+            const message = testimonyForm.querySelector('textarea').value.trim();
             const rating = parseInt(ratingInput.value);
             const initials = name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
-
-            let starHtml = '';
-            for (let i = 0; i < 5; i++) {
-                starHtml += `<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' ${i < rating ? 1 : 0};">${i < rating ? 'star' : 'star'}</span>`;
-            }
 
             // Create new testimony card
             const newCard = document.createElement('div');
             newCard.className = 'min-w-[320px] md:min-w-[450px] bg-surface p-xl rounded-[2.5rem] snap-center diffusion-shadow border border-outline/5 active';
-            newCard.innerHTML = `
-                <div class="flex gap-1 text-secondary mb-md">
-                    ${starHtml}
-                </div>
-                <p class="font-body-lg text-body-lg italic text-on-surface mb-xl leading-relaxed">"${message}"</p>
-                <div class="flex items-center gap-sm">
-                    <div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center font-label-md text-tertiary">${initials || '??'}</div>
-                    <div>
-                        <p class="font-label-md text-label-md">${name}</p>
-                        <p class="font-label-sm text-label-sm opacity-60">Pelanggan Terverifikasi</p>
-                    </div>
-                </div>
-            `;
+
+            const starWrap = document.createElement('div');
+            starWrap.className = 'flex gap-1 text-secondary mb-md';
+            for (let i = 0; i < 5; i++) {
+                const starIcon = document.createElement('span');
+                starIcon.className = 'material-symbols-outlined text-sm';
+                starIcon.style.fontVariationSettings = `'FILL' ${i < rating ? 1 : 0}`;
+                starIcon.textContent = 'star';
+                starWrap.appendChild(starIcon);
+            }
+
+            const messageEl = document.createElement('p');
+            messageEl.className = 'font-body-lg text-body-lg italic text-on-surface mb-xl leading-relaxed';
+            messageEl.textContent = `"${message}"`;
+
+            const profileWrap = document.createElement('div');
+            profileWrap.className = 'flex items-center gap-sm';
+
+            const avatar = document.createElement('div');
+            avatar.className = 'w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center font-label-md text-tertiary';
+            avatar.textContent = initials || '??';
+
+            const profileText = document.createElement('div');
+            const nameEl = document.createElement('p');
+            nameEl.className = 'font-label-md text-label-md';
+            nameEl.textContent = name;
+            const verifiedEl = document.createElement('p');
+            verifiedEl.className = 'font-label-sm text-label-sm opacity-60';
+            verifiedEl.textContent = 'Pelanggan Terverifikasi';
+
+            profileText.append(nameEl, verifiedEl);
+            profileWrap.append(avatar, profileText);
+            newCard.append(starWrap, messageEl, profileWrap);
 
             // Insert before the form card
             testimonialContainer.insertBefore(newCard, testimonyForm.closest('div'));
@@ -840,4 +853,4 @@
         }
     }
 </script>
-</body></html>>>>>>
+</body></html>
